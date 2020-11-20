@@ -17,7 +17,7 @@ const WeatherContainer = () => {
 
     useEffect(() => {
             dispatch(loadWeather({latitude, longitude}));
-    }, [dispatch]);
+    }, [coordsInfo]);
 
     return(
         <Weather
