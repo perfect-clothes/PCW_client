@@ -50,6 +50,7 @@ const Humid = styled.div`
     grid-area: Humid;
     font-size: 30px;
     padding-top: 20px;
+    margin-left: 20px;
 `;
 
 const SpinnerBlock = styled.div `
