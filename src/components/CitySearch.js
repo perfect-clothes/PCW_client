@@ -18,6 +18,7 @@ const StyledInput = styled.input`
     padding: 0px 10px;
     border-radius: 5px 0px 0px 5px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); 
+    opacity: 0.9;
 `;
 
 const StyledButton = styled.button`

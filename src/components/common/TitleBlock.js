@@ -1,18 +1,21 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 const TitleBlock = styled.div `
-    background: white;
     border-radius: 4px;
     border: none;
     width: 500px;
     height: 50px;
-    margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.125rem;
-    color: #373a40;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    ${props => props.time > 6 && props.time < 19 ?      //7시부터 18시까지는 주간, 19시부터 6시까지 밤으로 설정
+    css`
+        color: #373a40;
+    ` :
+    css`
+        color: white;
+    `}
 `;
 
 export default TitleBlock;

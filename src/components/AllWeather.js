@@ -16,6 +16,7 @@ const AllWeatherBlock = styled.div`
     height: 250px;
     margin-bottom: 60px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    opacity: 0.9;
     overflow: auto;
     p {
         padding-left: 300px;
@@ -123,12 +124,12 @@ const allWeatherData = [
     }
 ]
 */
-const AllWeather = ({allWeatherData, error, loading}) => {
+const AllWeather = ({allWeatherData, error, loading, hour}) => {
 
     if (error) {
         return (
             <ContainerBlock>
-                <TitleBlock>
+                <TitleBlock time={hour}>
                     <h2>Today's weather</h2>
                 </TitleBlock>
                 <AllWeatherBlock>
@@ -140,7 +141,7 @@ const AllWeather = ({allWeatherData, error, loading}) => {
 
     return (
         <ContainerBlock>
-            <TitleBlock>
+            <TitleBlock time={hour}>
                 <h2>Today's weather</h2>
             </TitleBlock>
             {loading ? (

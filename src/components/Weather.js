@@ -16,6 +16,7 @@ const WeatherBlock = styled.div`
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     color: #373a40;
     margin-bottom: 60px;
+    opacity: 0.9;
     display: grid;
     grid-template: 
         "Icon City City" 100px
@@ -56,6 +57,13 @@ const Humid = styled.div`
 const SpinnerBlock = styled.div `
     padding: 80px 230px;
 `;
+
+const ErrorBlock = styled(TitleBlock)`
+    background: white;
+    color: #373a40;
+    margin-bottom: 20px;
+`;
+
 //임시 데이터
 /*
 const weatherData = {
@@ -66,15 +74,15 @@ const weatherData = {
     humid: 50
 };
 */
-const Weather = ({weatherData, error, loading, dateInfo}) => {
+const Weather = ({weatherData, error, loading, dateInfo, hour}) => {
     const {year, month, date, day} = dateInfo;
 
     if (error) {
         return (
             <ContainerBlock>
-                <TitleBlock>
+                <ErrorBlock>
                     <h2>{year}년 {month}월 {date}일 {day} </h2>
-                </TitleBlock>
+                </ErrorBlock>
                 <TitleBlock>
                     <h3>날씨를 불러올 수 없습니다.</h3>
                 </TitleBlock>
@@ -84,7 +92,7 @@ const Weather = ({weatherData, error, loading, dateInfo}) => {
 
     return (
         <ContainerBlock>
-            <TitleBlock>
+            <TitleBlock time={hour}>
                 <h2>{year}년 {month}월 {date}일 {day} </h2>
             </TitleBlock>
             {loading ? (

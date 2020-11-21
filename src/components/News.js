@@ -16,6 +16,7 @@ const NewsBlock = styled.div`
     height: auto;
     padding-bottom: 20px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    opacity: 0.9;
     &:nth-child(odd) {
         background: #ebebeb;
     }
@@ -74,13 +75,13 @@ const newsData = [
     }
 ];
 */
-const News = ({newsData, error, loading}) => {
+const News = ({newsData, error, loading, hour}) => {
     //에러 처리
 
     if (error) {
         return (
             <ContainerBlock>
-                <TitleBlock>
+                <TitleBlock time={hour}>
                     <h2>News</h2>
                 </TitleBlock>
                 <NewsBlock>
@@ -92,7 +93,7 @@ const News = ({newsData, error, loading}) => {
 
     return (
         <ContainerBlock>
-            <TitleBlock>
+            <TitleBlock time={hour}>
                 <h2>News</h2>
             </TitleBlock>
             {loading && (

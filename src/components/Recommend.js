@@ -26,7 +26,8 @@ const RecommendBlock = styled.div`
         margin-bottom: 60px;
         border-radius: 0 0 4px 4px;
     }
-    cursor: pointer;        
+    cursor: pointer;    
+    opacity: 0.9;    
 `;
 
 const SpinnerBlock = styled.div `
@@ -43,14 +44,14 @@ const clothesData = {
     item: '목도리'
 };
 */
-const Recommend = ({clothesArray, error, loading}) => {
+const Recommend = ({clothesArray, error, loading, hour}) => {
     const [visible, setVisible] = useState(false);
     const [value, setValue] = useState('');
 
     if (error) {
         return (
             <ContainerBlock>
-                <TitleBlock>
+                <TitleBlock time={hour}>
                     <h2>Recommendation</h2>
                 </TitleBlock>
                 <RecommendBlock>
@@ -72,7 +73,7 @@ const Recommend = ({clothesArray, error, loading}) => {
     return (
         <>
             <ContainerBlock>
-                <TitleBlock>
+                <TitleBlock time={hour}>
                     <h2> Recommendation </h2>
                 </TitleBlock>
                 {loading && (
