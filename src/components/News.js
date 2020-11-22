@@ -38,7 +38,6 @@ const NewsBlock = styled.div`
         margin-left: 300px;
         font-size: 1.25rem;
         font-weight: 700;
-        color: black;
     }
     @media screen and (max-width: 801px) {
         width: 500px;
