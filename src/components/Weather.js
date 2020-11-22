@@ -80,12 +80,12 @@ const Weather = ({weatherData, error, loading, dateInfo, hour}) => {
     if (error) {
         return (
             <ContainerBlock>
-                <ErrorBlock>
+                <TitleBlock time={hour}>
                     <h2>{year}년 {month}월 {date}일 {day} </h2>
-                </ErrorBlock>
-                <TitleBlock>
-                    <h3>날씨를 불러올 수 없습니다.</h3>
                 </TitleBlock>
+                <ErrorBlock>
+                    <h3>날씨를 불러올 수 없습니다.</h3>
+                </ErrorBlock>
             </ContainerBlock>
         );
     }
