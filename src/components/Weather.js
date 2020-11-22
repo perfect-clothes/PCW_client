@@ -97,16 +97,6 @@ const ErrorBlock = styled(TitleBlock)`
     margin-bottom: 20px;
 `;
 
-//임시 데이터
-/*
-const weatherData = {
-    weather: 'Clouds',
-    city: 'Seoul',
-    country: 'kr',
-    temp: 16,
-    humid: 50
-};
-*/
 const Weather = ({weatherData, error, loading, dateInfo, hour}) => {
     const {year, month, date, day} = dateInfo;
 

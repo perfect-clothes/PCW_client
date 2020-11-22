@@ -79,59 +79,6 @@ const HumidBlock = styled.div`
     font-size: 1.5rem;
 `;
 
-//임시 데이터
-/*
-const allWeatherData = [
-    {
-        time: "15:00:00",
-        weather: "Clear",
-        temp: 15,
-        humid: 60
-    },
-    {
-        time: "18:00:00",
-        weather: "Clouds",
-        temp: 15,
-        humid: 50
-    },
-    {
-        time: "21:00:00",
-        weather: "Fog",
-        temp: 14,
-        humid: 50
-    },
-    {
-        time: "24:00:00",
-        weather: "Fog",
-        temp: 13,
-        humid: 50
-    },
-    {
-        time: "03:00:00",
-        weather: "Tornado",
-        temp: 13,
-        humid: 50
-    },
-    {
-        time: "06:00:00",
-        weather: "Tornado",
-        temp: 12,
-        humid: 40
-    },
-    {
-        time: "09:00:00",
-        weather: "Clear",
-        temp: 14,
-        humid: 40
-    },
-    {
-        time: "12:00:00",
-        weather: "Clear",
-        temp: 15,
-        humid: 40
-    }
-]
-*/
 const AllWeather = ({allWeatherData, error, loading, hour}) => {
 
     if (error) {

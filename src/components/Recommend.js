@@ -53,16 +53,6 @@ const SpinnerBlock = styled.div `
     padding-top: 5px;
 `;
 
-//임시 데이터
-/*
-const clothesData = {
-    top: '',
-    bottom: '청바지',
-    outer: '자켓',
-    inner: '히트텍',
-    item: '목도리'
-};
-*/
 const Recommend = ({clothesArray, error, loading, hour}) => {
     const [visible, setVisible] = useState(false);
     const [value, setValue] = useState('');
