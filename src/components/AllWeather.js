@@ -1,5 +1,5 @@
 import React from "react";
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import WeatherIconSwitch from "../lib/WeatherIconSwitch";
 import ContainerBlock from "./common/ContainerBlock";
 import TitleBlock from "./common/TitleBlock";
@@ -9,6 +9,7 @@ const AllWeatherBlock = styled.div`
     background: white;
     border-radius: 4px;
     border: none;
+    color: black;
     display: inline-flex;
     align-items: center;
     justify-content: start;
@@ -29,7 +30,16 @@ const AllWeatherBlock = styled.div`
         p {
             padding-left: 150px;
         }    
-    }       
+    }
+    
+    ${props => props.time > 6 && props.time < 19 ?      //7시부터 18시까지는 주간, 19시부터 6시까지 밤으로 설정
+    css`
+        background: white;
+    ` :
+    css`
+        background: #373a40;
+        color: white;
+    `}           
 `;
 
 const WeatherInfoBlock = styled.div`
@@ -37,7 +47,6 @@ const WeatherInfoBlock = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: black;
     height: 200px;
     margin: 5px;
     padding: 20px 20px;
@@ -132,7 +141,7 @@ const AllWeather = ({allWeatherData, error, loading, hour}) => {
                 <TitleBlock time={hour}>
                     <h2>Today's weather</h2>
                 </TitleBlock>
-                <AllWeatherBlock>
+                <AllWeatherBlock time={hour}>
                     <p>날씨를 불러올 수 없습니다.</p>
                 </AllWeatherBlock>
             </ContainerBlock>
@@ -145,11 +154,11 @@ const AllWeather = ({allWeatherData, error, loading, hour}) => {
                 <h2>Today's weather</h2>
             </TitleBlock>
             {loading ? (
-                <AllWeatherBlock>
+                <AllWeatherBlock time={hour}>
                     <Spinner/>
                 </AllWeatherBlock>
             ) : (
-                <AllWeatherBlock>
+                <AllWeatherBlock time={hour}>
                     {allWeatherData.map((data, index) => (
                         <WeatherInfoBlock key={index}>
                             <TimeBlock>{data.time.slice(0, 5)}</TimeBlock>

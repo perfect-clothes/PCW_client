@@ -1,5 +1,5 @@
 import React from "react";
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import WeatherIconSwitch from "../lib/WeatherIconSwitch";
 import ContainerBlock from "./common/ContainerBlock";
 import TitleBlock from "./common/TitleBlock";
@@ -24,7 +24,15 @@ const WeatherBlock = styled.div`
         /2fr 1fr 1.5fr;
     @media screen and (max-width: 801px) {
         width: 500px;    
-    }    
+    }
+    ${props => props.time > 6 && props.time < 19 ?      //7시부터 18시까지는 주간, 19시부터 6시까지 밤으로 설정
+    css`
+        background: white;
+    ` :
+    css`
+        background: #373a40;
+        color: white;
+    `}    
 `;
 //날씨 아이콘
 const Icon = styled.div`
@@ -77,8 +85,15 @@ const SpinnerBlock = styled.div `
 `;
 
 const ErrorBlock = styled(TitleBlock)`
-    background: white;
-    color: #373a40;
+    ${props => props.time > 6 && props.time < 19 ?      //7시부터 18시까지는 주간, 19시부터 6시까지 밤으로 설정
+        css`
+            background: white;
+            color: black;
+        ` :
+        css`
+            background: #373a40;
+            color: white;
+        `}
     margin-bottom: 20px;
 `;
 
@@ -101,7 +116,7 @@ const Weather = ({weatherData, error, loading, dateInfo, hour}) => {
                 <TitleBlock time={hour}>
                     <h2>{year}년 {month}월 {date}일 {day} </h2>
                 </TitleBlock>
-                <ErrorBlock>
+                <ErrorBlock time={hour}>
                     <h3>날씨를 불러올 수 없습니다.</h3>
                 </ErrorBlock>
             </ContainerBlock>
@@ -114,13 +129,13 @@ const Weather = ({weatherData, error, loading, dateInfo, hour}) => {
                 <h2>{year}년 {month}월 {date}일 {day} </h2>
             </TitleBlock>
             {loading ? (
-                <WeatherBlock>
+                <WeatherBlock time={hour}>
                     <SpinnerBlock>
                         <Spinner/>
                     </SpinnerBlock>
                 </WeatherBlock>
             ) : (
-                <WeatherBlock>
+                <WeatherBlock time={hour}>
                     <Icon>
                         {WeatherIconSwitch(weatherData.weather)}
                     </Icon>
