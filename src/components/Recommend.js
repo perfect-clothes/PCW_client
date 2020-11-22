@@ -7,14 +7,14 @@ import RecommendModal from "./RecommendModal";
 
 const RecommendBlock = styled.div`
     background: white;
-    width: 500px;
+    width: 800px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.25rem;
     font-weight: 700;
-    color: #373a40;
+    color: black;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     &:nth-child(odd) {
         background: #ebebeb;
@@ -26,8 +26,12 @@ const RecommendBlock = styled.div`
         margin-bottom: 60px;
         border-radius: 0 0 4px 4px;
     }
-    cursor: pointer;    
-    opacity: 0.9;    
+    cursor: pointer;     
+    opacity: 0.75;
+    
+    @media screen and (max-width: 801px) {
+        width: 500px;    
+    }
 `;
 
 const SpinnerBlock = styled.div `

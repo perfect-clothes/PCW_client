@@ -16,13 +16,13 @@ const AllWeatherBlock = styled.div`
     height: 250px;
     margin-bottom: 60px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    opacity: 0.9;
+    opacity: 0.75;
     overflow: auto;
     p {
         padding-left: 300px;
         font-size: 1.25rem;
         font-weight: 700;
-        color: #373a40;
+        color: black;
     }
     @media screen and (max-width: 801px) {
         width: 500px;
@@ -37,7 +37,7 @@ const WeatherInfoBlock = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #373a40;
+    color: black;
     height: 200px;
     margin: 5px;
     padding: 20px 20px;

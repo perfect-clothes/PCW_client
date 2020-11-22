@@ -16,7 +16,7 @@ const NewsBlock = styled.div`
     height: auto;
     padding-bottom: 20px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    opacity: 0.9;
+    opacity: 0.8;
     &:nth-child(odd) {
         background: #ebebeb;
     }
@@ -32,7 +32,7 @@ const NewsBlock = styled.div`
         margin-left: 300px;
         font-size: 1.25rem;
         font-weight: 700;
-        color: #373a40;
+        color: black;
     }
     @media screen and (max-width: 801px) {
         width: 500px;
@@ -45,7 +45,7 @@ const NewsBlock = styled.div`
 const Title = styled.div`
     padding-left: 30px;
     a {
-        color: #373a40;
+        color: black;
     }   
 `;
 
