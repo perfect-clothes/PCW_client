@@ -62,15 +62,15 @@
 </div>
 데이터 로드에 성공하면 해당 위치의 정보를 보여주고 실패하면 에러 화면이 나타나게 된다.<br/>
 <div>
-    <img width="350" alt="search" src="https://user-images.githubusercontent.com/59433441/100041074-e8515000-2e4b-11eb-9ae4-baf17fcdf599.png">
-    <img width="348" alt="search_modal" src="https://user-images.githubusercontent.com/59433441/100041096-f606d580-2e4b-11eb-8070-85961e108f24.png">
+    <img width="290" alt="search" src="https://user-images.githubusercontent.com/59433441/100052412-42104500-2e61-11eb-8c4b-dd9404697c9b.png">
+    <img width="350" alt="search_modal" src="https://user-images.githubusercontent.com/59433441/100052415-43417200-2e61-11eb-8735-7eb49fecea9c.png">
 </div>
 도시 검색 기능을 이용하면 특정 도시의 날씨 정보와 추천 옷들을 찾아볼 수 있다.<br/>
 현재 대한민국의 시 단위까지 검색 가능하며, 해당 단위에 없는 지역을 검색하거나 잘못된 도시를 검색했을 경우 검색에 실패했다는 모달이 나타난다.<br/>
 <div>
-    <img width="300" alt="recommend_modal" src="https://user-images.githubusercontent.com/59433441/100042191-4bdc7d00-2e4e-11eb-8e5c-bfc0bc47ba47.png">
-    <img width="300" alt="scroll" src="https://user-images.githubusercontent.com/59433441/100042057-facc8900-2e4d-11eb-95a0-2ebd5f850683.png">
-    <img width="300" alt="news" src="https://user-images.githubusercontent.com/59433441/100042066-015b0080-2e4e-11eb-9c77-d639ac8b11e4.png">
+    <img width="250" alt="recommend_modal" src="https://user-images.githubusercontent.com/59433441/100042191-4bdc7d00-2e4e-11eb-8e5c-bfc0bc47ba47.png">
+    <img width="250" alt="scroll" src="https://user-images.githubusercontent.com/59433441/100042057-facc8900-2e4d-11eb-95a0-2ebd5f850683.png">
+    <img width="250" alt="news" src="https://user-images.githubusercontent.com/59433441/100042066-015b0080-2e4e-11eb-9c77-d639ac8b11e4.png">
 </div>
 추천 옷 항목을 클릭할 경우 옷에 대한 이미지를 모달 형태로 보여준다.<br/>
 오늘의 날씨는 3시간 간격의 날씨 정보이며 스크롤하여 볼 수 있다.<br/>
