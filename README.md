@@ -1,16 +1,4 @@
 # PCW_client
-## 프로젝트 목표
-- Server-Client communication exercise (서버-클라이언트 통신 연습)
-- Collaborative development with Git (Git을 사용한 개발 협업)
-## 목표 서비스 
-1. **Recommend clothes for the weather (날씨에 맞는 옷차림 추천)**
-    - Clothes for the current weather (현재 날씨에 맞는 옷)
-2. **Weather check (날씨 확인)**
-    - Current weather in your area (해당 지역의 현재 날씨)
-    - All weather in the area every 3 hours (해당 지역의 날씨를 3시간 마다)
-    - Allow user location permission to check the weather at that location (사용자 위치 권한을 허용하면 그 위치의 날씨 확인 가능)
-    - City search available (도시 검색으로 원하는 도시의 날씨 확인)
-3. **Weather news (날씨 관련 기사 확인)**
 ## 기능
 - geolocation API를 사용하여 위치권한을 묻고, 사용자의 위치에 따른 날씨와 옷을 추천
 - 도시를 검색하면 해당 도시의 위치정보를 서버에 전송하여 날씨 데이터를 가져옴
@@ -52,13 +40,16 @@
 <img width="350" alt="default_night_1" src="https://user-images.githubusercontent.com/59433441/100039980-c35bdd80-2e49-11eb-8f84-d20115afc7f3.png">
 <img width="350" alt="default_night_2" src="https://user-images.githubusercontent.com/59433441/100040012-d078cc80-2e49-11eb-9d22-53cf4085fc0f.png">
 오후 7시부터 오전 6시까지는 밤으로 설정하여 배경과 UI를 밤에 맞게 설정하였다.<br/>
-<div></div>
--위치 권한- -로딩 화면-<br/>
+<div>
+    <img width="380" style="margin-right:5px;" alt="ask_authority" src="https://user-images.githubusercontent.com/59433441/100196653-84f31b00-2f3c-11eb-810b-f89fd5a9208c.png">
+    <img width="320" alt="loading" src="https://user-images.githubusercontent.com/59433441/100196659-87557500-2f3c-11eb-8305-a32c72673c7c.png">
+</div>
 위치 권한을 허용할 것인지 물어보고 허용한다면 해당 위치의 정보를 받아 날씨, 옷 추천을 보여준다.<br/>
 만약 위치 권한을 차단할 경우 기본값인 서울이 계속 보이게 된다.<br/>
 데이터 로드시 spinner로 로딩 UI를 구현하여 UX를 향상시켰다.<br/>
 <div>
-    <img width="350" alt="error" src="https://user-images.githubusercontent.com/59433441/100040847-65c89080-2e4b-11eb-928b-f6cbdf74b8d7.png">
+    <img width="365" alt="authority_confirm" src="https://user-images.githubusercontent.com/59433441/100197112-385c0f80-2f3d-11eb-9f99-a483eb98ec95.png">
+    <img width="350" alt="error" src="https://user-images.githubusercontent.com/59433441/100197473-b5878480-2f3d-11eb-832c-ef981c9027e8.png">
 </div>
 데이터 로드에 성공하면 해당 위치의 정보를 보여주고 실패하면 에러 화면이 나타나게 된다.<br/>
 <div>
